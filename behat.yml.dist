@@ -1,0 +1,16 @@
+default:
+  extensions:
+    FriendsOfBehat\SymfonyExtension:
+      bootstrap: tests/bootstrap.php
+      kernel:
+        class: App\Kernel
+  suites:
+    sms_notification:
+      paths: [ "%paths.base%/features/notification/sms" ]
+      contexts: [ App\Tests\Behat\Notification\SmsContext ]
+    email_notification:
+      paths: [ "%paths.base%/features/notification/email" ]
+      contexts: [ App\Tests\Behat\Notification\EmailContext ]
+    failed_notification_sender:
+      paths: [ "%paths.base%/features/notification/failedNotificationSender" ]
+      contexts: [ App\Tests\Behat\Notification\ResendFailedNotificationContext ]
