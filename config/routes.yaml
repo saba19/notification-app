@@ -1,0 +1,5 @@
+Shared:
+  resource:
+    path: ../src/UseCase/Notification/UI/Controller
+    namespace: App\UseCase\Notification\UI\Controller
+  type: attribute
